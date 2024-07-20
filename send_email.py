@@ -1,7 +1,6 @@
 import os
 import smtplib
 from email.message import EmailMessage
-from email.utils import formataddr
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -22,7 +21,7 @@ def send_email(subject, receiver_email, name, due_date, invoice_no, amount):
     # Create the base text message.
     msg = EmailMessage()
     msg["Subject"] = subject
-    msg["From"] = formataddr(("Alaankrit DAbral Corp.", sender_email))
+    msg["From"] = sender_email
     msg["To"] = receiver_email
     msg["BCC"] = sender_email
 
