@@ -6,24 +6,23 @@ on:
     # For example, to run it every day at 00:00 UTC
     - cron: '0 0 * * *'
 
+permissions:
+  contents: read
+
 jobs:
-  run-python-script:
+  Run:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
       with:
-        python-version: 'latest'  # Specify the Python version you need
-
+        python-version: "3.10"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-
-    - name: Run Python script
+    - name: Run script
       run: |
-        python main.py
+        python3 send_email.py
+        python3 main.py
