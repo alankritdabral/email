@@ -15,7 +15,7 @@ EMAIL_SERVER = "smtp.gmail.com"
 
 # Read environment variables
 sender_email ="dabralalankrit@gmail.com"
-password_email ='giyy qsyl lazs hufe"
+password_email ="giyy qsyl lazs hufe"
 
 print(f"Sender Email: {sender_email}")
 print(f"Password: {password_email}")
