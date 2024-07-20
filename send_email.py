@@ -1,21 +1,21 @@
 import os
 import smtplib
 from email.message import EmailMessage
-from pathlib import Path
+# from pathlib import Path
 from dotenv import load_dotenv
 
 PORT = 465  # For SSL
 EMAIL_SERVER = "smtp.gmail.com"
 
 # Load the environment variables
-current_dir = Path(__file__).resolve().parent if "__file__" in locals() else Path.cwd()
-envars = current_dir / ".env"
-envars = "/home/aloo/Desktop/mini project/auto-email/.env"  
-load_dotenv(envars)
+# current_dir = Path(__file__).resolve().parent if "__file__" in locals() else Path.cwd()
+# envars = current_dir / ".env"
+# envars = "/home/aloo/Desktop/mini project/auto-email/.env"  
+# load_dotenv(envars)
 
 # Read environment variables
-sender_email = os.getenv("SENDER_EMAIL")
-password_email = os.getenv("PASSWORD_EMAIL")
+sender_email ="dabralalankrit@gmail.com"
+password_email ='giyy qsyl lazs hufe"
 
 print(f"Sender Email: {sender_email}")
 print(f"Password: {password_email}")
