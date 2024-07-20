@@ -17,6 +17,9 @@ load_dotenv(envars)
 sender_email = os.getenv("SENDER_EMAIL")
 password_email = os.getenv("PASSWORD_EMAIL")
 
+print(f"Sender Email: {sender_email}")
+print(f"Password: {password_email}")
+
 def send_email(subject, receiver_email, name, due_date, invoice_no, amount):
     # Create the base text message.
     msg = EmailMessage()
